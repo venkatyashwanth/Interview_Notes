@@ -1,0 +1,21 @@
+Coding Interview Questions: 
+
+////////////////////////////////
+1. What is SQL and its significance in databases?
+
+SQL stands for Structured Query Language. It is a programming language used for managing and manipulating relational databases. SQL is essential for tasks like querying data, updating records, and defining the structure of databases.
+
+////////////////////////////////
+2. Explain the basic structure of an SQL query.
+The basic structure of an SQL query consists of a SELECT clause (specifying columns), a FROM clause (specifying tables), and optional clauses like WHERE (specifying conditions) and ORDER BY (sorting results).
+
+////////////////////////////////
+3. What is normalization.
+Normalization is organizing data in a database to reduce redundancy and dependency. The primary goals of normalization are to eliminate data anomalies, ensure data integrity, and minimize the chances of data redundancy. Break down larger tables into smaller, related tables and define their relationships.
+
+////////////////////////////////
+4. What is denormalization?
+Denormalization is the process of intentionally introducing redundancy into a database by adding redundant data to one or more tables. This is done to improve query performance and simplify data retrieval at the cost of increased storage space and potential data integrity challenges. Denormalization is often applied in situations where the performance of read operations is more critical than the performance of write operations.
+
+////////////////////////////////
+Differentiate between SQL and MySQL.
