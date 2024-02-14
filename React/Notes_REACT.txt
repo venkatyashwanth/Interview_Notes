@@ -1,0 +1,76 @@
+////////////////////////////////
+1. What is useState in React.
+useState is React Hook that allows you to add state to a functional component. It returns an array with two values: the current state and a function to update it. 
+The Hook takes an initial state value as an argument and returns an updated state value whenever the setter function is called. 
+
+const [state,setState] = useState(initialValue);
+Here, the initialValue is the value you want to start with and the state is the cureent state value that can be used in your component. 
+The setState function can be used to update the state, triggering a re-render of your component. 
+
+////////////////////////////////
+2. What data useState can store. 
+In React, useState can store any type of value, which includes primitive data types like string, number and Boolean, as well as complex data types such as array, object and function. 
+
+where as the state in a class component is limited to being an object.
+
+////////////////////////////////
+3. Syntax for Updating objects and arrays in useState: 
+
+Object: 
+const [state,setState] = useState({name: 'yash', age: 29})
+
+const updateName = () => {
+	setState({...state,name: 'venkat'})
+}
+
+const updateAge = () => {
+	setState({...state,age:state.age+1})
+}
+
+Array: 
+const [array,setArray] = useState([1,2,3,4,5,6]);
+
+const addItem = () => {
+	setArray([...array,6])
+}
+
+const removeItem = () => {
+	setArray(array.slice(0,array.length -1))
+}
+
+
+////////////////////////////////
+2. Destructuring assignment
+The Destructuring assignment syntax is a Javascript expression that makes it possible to unpack values from an array, or properties from ojbects, into distinct variables. 
+
+Array Destructuring: 
+let array = [1, 2, 3, 4, 5, 6];
+let a, b, rest;
+[a, b, ...rest] = array;
+console.log(a); //Outpput: 1
+console.log(b); //Outpput: 2
+console.log(rest); //output: [3,4,5,6]
+
+let funArray = [1,2,()=>console.log('I am a function')];
+let a,b,fun;
+[a,b,fun] = funArray;
+fun(); //output: I am a function
+
+Object Destructuring: 
+const obj = { name: 'yashwanth', age: '29' };
+const { name, age } = obj;
+console.log(name);
+console.log(age)
+
+const useCustom = { names: 'yashwanth', showname: () => console.log(names) };
+// Destructuring;
+const { names, showname } = useCustom;
+showname();
+
+
+
+References: 
+1.About useStateHook: 
+https://blog.logrocket.com/guide-usestate-react/#:~:text=start%20with%20use%20.-,What%20is%20the%20useState%20Hook%3F,the%20setter%20function%20is%20called.
+2. Destructuring: 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment

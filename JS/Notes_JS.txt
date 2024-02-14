@@ -1,0 +1,48 @@
+////////////////////////////////
+1. What is pure function
+Functions always returns the same output as given the same input parameters. Pure functions only depend on their input parameters and don't affect the state of the application or other parts of the code. 
+
+- Functions do not modify any state or have any side effects. 
+- Functions only depend on their input parameters. 
+- These are predictable and have a deterministic behavior and are easier to test, debug and maintain. 
+
+function capitalize(str){
+	return str.toUpperCase();
+}
+
+console.log(capitalize('javascript')); //Output: JAVASCRIPT
+
+////////////////////////////////
+2. kWhat is impure function
+Impure functions are functions that can modify the state of the application or have side effects. In other words, impure functions can have unpredictable behavior and do affect other parts of the application. 
+
+- Functions can modify the state fo the application or have side effects, which is necessary for many tasks sunch as I/O operations or DOM manipulation. 
+- Functions depend on other parts of the code. 
+- These are unpredictable and can have a nod-deterministic behavior and are harder to test and maintain. 
+
+let flag = 0;
+function incrementFlag(){
+	flag++;
+}
+incrementFlag();
+console.log(flag); //output: 1
+incrementFlag();
+console.log(flag); //output: 2
+
+////////////////////////////////
+3. What is sdie effect
+The side effect / leaking does happen when the function tries to utilize any external code inside the function, which in turn impacts the ability of the function, to perform that specific task for which the function is built. 
+
+let c = 1;
+
+function changeval(a,b){
+	c = a+b;
+	return c;
+}
+
+changeval(1,2);
+console.log(c); //side effect is value of c will change. 
+
+////////////////////////////////
+References: 
+1. https://www.geeksforgeeks.org/understanding-the-difference-between-pure-and-impure-functions-in-javascript/

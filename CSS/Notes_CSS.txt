@@ -1,0 +1,3 @@
+What is FlexBox?
+Flexbox makes it easy to allign elements to one another in different directions and orders. The main idea behind flexbox is to give the container the ability to expand and to shrink elements to best use all the available space. 
+Flex box replaces float layouts using less and more redable and logical code. Flexbox completely changes the way that we build one dimensional layout. 
